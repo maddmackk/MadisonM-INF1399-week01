@@ -12,16 +12,17 @@
         color: yellow;}
     </style>
         <script>
-        function diplay(number) {
+        function display(number) {
             document.getElementById("decimal_input").innerHTML=number
             var bin = dec2bin(number)
+            var bcd = dec2bin(number)
             document.getElementById("binary_output").innerHTML=bcd
         }
-            function dec2bin (decimal) {
-            binary= ["0000","0001","0010","0011",
+            function dec2bin(decimal) {
+            var binary= ["0000","0001","0010","0011",
                     "0100","0101","0110","0111",
                     "1000","1001"]
-            return(binary_numbers[decimal])
+            return(binary[decimal])
             }
         </script>
     </head>
@@ -46,7 +47,7 @@
             <td class="blackbox"><h3>Decimal to Binary</h3>
                 <p id="decimal_input"> ???</p>
                 <p id="binary_output">???</p>
-                   </td>
+            </td>
             <td class="blackbox"> Binary to SSD Signals</td>
             <td class="blackbox"> Illuminate Signals</td>
             </tr>
